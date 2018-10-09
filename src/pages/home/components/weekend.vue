@@ -4,7 +4,7 @@
       <ul>
         <li
           class="item border-bottom"
-          v-for="item of recommendList"
+          v-for="item of weekendList"
           :key="item.id"
         >
           <div class="item-img-wrapper">
@@ -21,25 +21,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/a1/4faeed396a85aa.jpg_r_640x214_75530e9b.jpg',
-        title: '北京野生动物园',
-        desc: '北京野生动物园激情人生'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/a1/4faeed396a85aa.jpg_r_640x214_75530e9b.jpg',
-        title: '北京野生动物园',
-        desc: '北京野生动物园激情人生'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/a1/4faeed396a85aa.jpg_r_640x214_75530e9b.jpg',
-        title: '北京野生动物园',
-        desc: '北京野生动物园激情人生'
-      }]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>
@@ -48,12 +31,11 @@ export default {
   .recommend-title
     line-height .8rem
     text-indent .2rem
-    margin-top .2rem
     background #eee
   .item-img-wrapper
     overflow hidden
     height 0
-    padding-bottom 33.9%
+    padding-bottom 37.09%
     .item-img
       width 100%
   .item-info
